@@ -20,7 +20,7 @@ if ( ! function_exists('js_url')){
 if ( ! function_exists('libraries_url')){
   function libraries_url($uri = ''){
     $CI =& get_instance();
-    return base_url()."asset/js/plugins/".$uri;
+    return base_url()."asset/plugins/".$uri;
   }
 }
 
