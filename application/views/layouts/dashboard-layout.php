@@ -290,8 +290,8 @@
           <img src="<?= img_url('user2-160x160.jpg') ?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Febrian Imanda</p>
-          <p><strong>Saldo</strong> Rp. 38.000.000</p>
+          <p><?= $customername ?></p>
+          <p><strong>Saldo</strong> <?= $balance ?></p>
         </div>
       </div>
       <!-- /.search form -->
@@ -332,7 +332,7 @@
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-line-chart"></i><span>Statistic</span></a></li>
-        <li><a href="#"><i class="fa fa-get-pocket"></i><span>Account</span></a></li>
+        <li><a href="<?= site_url('topup') ?>"><i class="fa fa-get-pocket"></i><span>Top Up</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
