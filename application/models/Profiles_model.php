@@ -9,21 +9,25 @@ class Profiles_model extends CI_Model {
 		return $this->db->get('profiles_question');
 	}
 
+	public function is_exist($userId) {
+		$this->db->where('userId', $userId);
+		$query = $this->db->get($this->table);
+		if($this->db->affected_rows() == 1){
+  		return true;
+  	} else {
+  		return false;
+  	}
+	} 
+
 	public function read_profiles($userId) {
 		$this->db->where('userId', $userId);
 		$query = $this->db->get($this->table);
 		return $query;
 	}
 
-	public function update_jumlah($key, $val, $inc=true) {
-		$this->db->where($key, $val);
-		if($inc == true) {
-			$this->db->set('jumlah','`jumlah`+1', FALSE);
-		} else {
-			$this->db->set('jumlah','`jumlah`-1', FALSE);
-		}
-		$query = $this->db->update($this->table);
-		return ($this->db->affected_rows() != 1) ? False : True;
+	public function insert_profiles($data) {
+		$query = $this->db->insert($this->table, $data);
+		return ($this->db->affected_rows() != 1) ? $this->db->error() : True;
 	}
 
 }

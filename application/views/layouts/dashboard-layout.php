@@ -1,3 +1,10 @@
+<?php
+  if($this->session->userdata('loggedIn') === false) {
+    $this->session->set_flashdata('status', 'danger');
+    $this->session->set_flashdata('message', 'Session anda sudah habis, harap login kembali');
+    redirect('auth');
+  }
+?>
 <!DOCTYPE html>
 <html>
 <head>
