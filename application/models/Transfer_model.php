@@ -17,7 +17,7 @@ class Transfer_model extends CI_Model {
 		return $query;
 	}
 
-	public function insert_expense($data) {
+	public function insert_transfer($data) {
 		$query = $this->db->insert($this->table, $data);
 		return ($this->db->affected_rows() != 1) ? $this->db->error() : True;
 	}

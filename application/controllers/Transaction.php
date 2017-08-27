@@ -35,7 +35,7 @@ class Transaction extends CI_Controller {
 			redirect(site_url('dashboard'), 'refresh');
 		} else {
 			$this->session->set_flashdata('status', 'danger');
-			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda anda');
+			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda');
 			redirect(site_url('transaction/transfer'), 'refresh');
 		}
 	}
@@ -51,7 +51,7 @@ class Transaction extends CI_Controller {
 			redirect(site_url('dashboard'), 'refresh');
 		} else {
 			$this->session->set_flashdata('status', 'danger');
-			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda anda');
+			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda');
 			redirect(site_url('transaction/transfer'), 'refresh');
 		}
 	}
@@ -67,7 +67,7 @@ class Transaction extends CI_Controller {
 			redirect(site_url('dashboard'), 'refresh');
 		} else {
 			$this->session->set_flashdata('status', 'danger');
-			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda anda');
+			$this->session->set_flashdata('message', 'Ada kesalahan ketika menyimpan transaksi anda');
 			redirect(site_url('transaction/transfer'), 'refresh');
 		}
 	}
